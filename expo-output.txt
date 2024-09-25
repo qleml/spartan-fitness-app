@@ -1,0 +1,48 @@
+Script started on Wed Sep 25 22:04:44 2024
+command: expo start --tunnel
+[90mStarting project at /Users/clemenschristoph/dev/SPARTAN/spartan-fitness-app[39m
+[31m(node:16136) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)[39m
+[96D[2KStarting Metro Bundler
+[96D[2KTunnel connected.
+[96D[2KTunnel ready.
+[96D[2K▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█ ▄▄▄▄▄ █ ██▀▀ ▄▄▄▀▀▀██ ▄▄▄▄▄ █
+█ █   █ █  ▀█ ▀ ▀▄▄▄█ █ █   █ █
+█ █▄▄▄█ █▀  █▄▄ ▄ ▄▄▀██ █▄▄▄█ █
+█▄▄▄▄▄▄▄█▄█ ▀▄█ ▀ ▀ ▀ █▄▄▄▄▄▄▄█
+█ ▄▀▀▄▄▄▀▀█▄█▄▀█ ▀ ▄█▄▀▀ ▀ ▄  █
+█ ▄▀   ▄█▀ ▄█▀█▄ ▄ ██ ▄▄▀▄█▄  █
+██   ██▄█▄▀▀▄▀▄ ▀▀▄▄█▄█▀▄▀▄█▀▀█
+█▀▀ ██ ▄█▄█▄ ▄ ▄▄▄ ██▄█▀▄ ▄▄▀ █
+█▀█  ▀▄▄ █▀██▄ ▀ █ ▄██▄▀▀▀▄█▀ █
+███▀  ▀▄█▄▄▀█▀█▀   █▀▀▄ █▀ ▄█ █
+█▄▄█▄█▄▄█▀▄▄▄▀▄▄▀ ▄▄▀ ▄▄▄ ▀█▄▀█
+█ ▄▄▄▄▄ █▀ █ ▄ ▄   ▀  █▄█  ██▄█
+█ █   █ █▄▀▀█▄ ▀    ▄▄ ▄▄▄▄▀▄▀█
+█ █▄▄▄█ █▀▄██▀█▀ █▀▄▄ ▄█▀▀▀█  █
+█▄▄▄▄▄▄▄█▄█▄▄█▄▄██▄██▄█▄█▄▄█▄██
+
+[96D[2K› Metro waiting on [4mexp://ydbmn3s-anonymous-8081.exp.direct[24m
+[96D[2K› Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
+[96D[2K
+[96D[2K› Web is waiting on [4mhttp://localhost:8081[24m
+[96D[2K
+[96D[2K› Using [36mExpo Go[39m
+[96D[2K› Press [1ms[22m [2m│[22m switch to development build
+
+› Press [1ma[22m [2m│[22m open Android
+› Press [1mi[22m [2m│[22m open iOS simulator
+› Press [1mw[22m [2m│[22m open web
+
+› Press [1mj[22m [2m│[22m open debugger
+› Press [1mr[22m [2m│[22m reload app
+› Press [1mm[22m [2m│[22m toggle menu
+› Press [1mo[22m [2m│[22m open project code in your editor
+
+[96D[2K› Press [1m?[22m [2m│[22m show all commands
+[96D[2K
+[96D[2KLogs for your project will appear below.[2m Press Ctrl+C to exit.[22m
+[?25l[37m⠋[39m Stopping server[2K[1G[?25h› Stopped server
+[?25h
+Script done on Wed Sep 25 22:04:55 2024
