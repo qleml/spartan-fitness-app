@@ -10,7 +10,7 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "docker": "script -t 0 expo-output.txt expo start --tunnel"
+    "docker": "script -t 0 expo-output.txt 'expo start --tunnel'"
   },
   "jest": {
     "preset": "jest-expo"
