@@ -19,4 +19,4 @@ COPY . .
 EXPOSE 8081
 
 # Start the application
-CMD ["npm", "run", "docker"]
+CMD ["sh", "-c", "npm run docker | tee out.log"]
