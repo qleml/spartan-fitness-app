@@ -1,19 +1,25 @@
-// SingleWorkoutComponent.tsx
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
+import { styled } from 'nativewind';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+dayjs.extend(relativeTime);
 
+
+const StyledView = styled(View);
+const StyledText = styled(Text);
 
 const SingleWorkoutComponent = () => {
-  const [workout, setWorkout] = useState(null);
+  const [workouts, setWorkouts] = useState(null);
 
   useEffect(() => {
     // Fetch data for a single workout item
     const fetchWorkout = async () => {
       try {
-        const response = await fetch(process.env.REACT_APP_API_URL + `/workouts`);
+        const response = await fetch(`http://192.168.1.66:7050/api/workouts`);
         const result = await response.json();
         console.log('Workout:', response);
-        setWorkout(result);
+        setWorkouts(result);
       } catch (error) {
         console.error('Error fetching workout:', error);
       }
@@ -22,30 +28,23 @@ const SingleWorkoutComponent = () => {
     fetchWorkout();
   }, []);
 
-  if (!workout) {
-    return <Text>Loading...</Text>;
+  if (!workouts) {
+    return <StyledText className="text-gray-500">Loading...</StyledText>;
   }
 
   return (
-    <View style={styles.container}>
-        {workout.map((workout) => (
-            <Text style={styles.name}>{workout.title}</Text>
-        ))}
-    </View>
+    <StyledView className="p-2 w-full">
+      {workouts.map((workout) => (
+        <StyledView key={workout.id} className="mb-4 bg-gray-800 p-5 rounded-3xl w-full border-4 border-gray-700">
+          <StyledText className="font-bold text-2xl text-white">{workout.title}</StyledText>
+          <StyledText className="text-red-200 font-semibold">{workout.user.username}</StyledText>
+          <StyledText className="text-gray-200">
+            {dayjs(workout.created_at).fromNow()}
+          </StyledText>  
+        </StyledView>
+      ))}
+    </StyledView>
   );
 };
-
-
-const styles = StyleSheet.create({
-    container: {
-      padding: 16,
-      borderBottomWidth: 1,
-      borderBottomColor: '#ccc',
-    },
-    name: {
-      fontWeight: 'bold',
-      fontSize: 16,
-    },
-});
 
 export default SingleWorkoutComponent;

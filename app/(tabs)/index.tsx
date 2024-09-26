@@ -55,7 +55,7 @@ export default function HomeScreen() {
         </ThemedText>
       </ThemedView>
       <View style={styles.container}>
-      <SingleWorkoutComponent workoutId="1" /> 
+      <SingleWorkoutComponent/> 
       </View>
     </ParallaxScrollView>
   );
