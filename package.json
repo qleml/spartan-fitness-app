@@ -10,7 +10,7 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "docker": "script -t 0 expo-output.txt npm run start"
+    "docker": "script expo-output.txt"
   },
   "jest": {
     "preset": "jest-expo"
