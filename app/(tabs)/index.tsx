@@ -1,9 +1,11 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform, View } from 'react-native';
+import React from 'react';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import SingleWorkoutComponent from '@/components/SingleWorkoutComponent';
 
 export default function HomeScreen() {
   return (
@@ -46,6 +48,15 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
       </ThemedView>
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">Step 4: View Data</ThemedText>
+        <ThemedText>
+          Belowis a table displaying data fetched from the database.
+        </ThemedText>
+      </ThemedView>
+      <View style={styles.container}>
+      <SingleWorkoutComponent workoutId="1" /> 
+      </View>
     </ParallaxScrollView>
   );
 }
@@ -66,5 +77,9 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     position: 'absolute',
+  },
+  container: {
+    flex: 1,
+    padding: 16,
   },
 });
