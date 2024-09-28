@@ -13,12 +13,11 @@ const SingleWorkoutComponent = () => {
   const [workouts, setWorkouts] = useState(null);
 
   useEffect(() => {
-    // Fetch data for a single workout item
     const fetchWorkout = async () => {
       try {
         const response = await fetch(`http://192.168.1.66:7050/api/workouts`);
         const result = await response.json();
-        console.log('Workout:', response);
+        console.log('Workout:', result);
         setWorkouts(result);
       } catch (error) {
         console.error('Error fetching workout:', error);
