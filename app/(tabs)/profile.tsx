@@ -10,6 +10,8 @@ import { ThemedView } from '@/components/ThemedView';
 
 import { useUser } from '@/context/UserContext';
 
+import ExercisesList from '@/components/ExercisesList';
+
 export default function TabTwoScreen() {
   const { user, setUser } = useUser();
 
@@ -35,6 +37,11 @@ export default function TabTwoScreen() {
           />
         </>
       )}
+
+      <Collapsible title="Exercises">
+        <ExercisesList />
+      </Collapsible>
+
     </ParallaxScrollView>
   );
 }
