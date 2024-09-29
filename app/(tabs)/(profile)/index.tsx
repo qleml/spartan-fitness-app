@@ -14,7 +14,7 @@ import { useUser } from '@/context/UserContext';
 
 import ExercisesList from '@/components/ExercisesList';
 
-export default function TabTwoScreen() {
+export default function ProfileScreen() {
   const { user, setUser } = useUser();
 
   const handleLogout = () => {
