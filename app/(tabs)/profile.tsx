@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'expo-router';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Text, StyleSheet, Button } from 'react-native';
 
@@ -10,6 +11,7 @@ import { ThemedView } from '@/components/ThemedView';
 
 import { useUser } from '@/context/UserContext';
 
+
 import ExercisesList from '@/components/ExercisesList';
 
 export default function TabTwoScreen() {
@@ -18,6 +20,10 @@ export default function TabTwoScreen() {
   const handleLogout = () => {
     setUser(null);
   };
+
+  const savePerson = () => {
+
+  }
 
   return (
     <ParallaxScrollView
@@ -33,14 +39,21 @@ export default function TabTwoScreen() {
             title="Logout"
             onPress={handleLogout}
             color="#FF0000"
-            className="mt-4 p-2 bg-red-600 text-white rounded"
           />
         </>
       )}
 
-      <Collapsible title="Exercises">
-        <ExercisesList />
-      </Collapsible>
+      <Link href="/settings" className="text-blue-500 text-center mt-4">
+        Settings
+      </Link>
+
+      <Button
+        title="Save Person"
+        onPress={savePerson}
+      />
+
+
+      <ExercisesList />
 
     </ParallaxScrollView>
   );
